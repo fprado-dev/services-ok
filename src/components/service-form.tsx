@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
 	Form,
 	FormControl,
@@ -64,7 +63,7 @@ export default function ServiceForm() {
 	const formValues = watch();
 
 	const onSubmit = (data: FormValues) => {
-		console.log(data);
+		console.log(data, formValues);
 		// Handle form submission here
 	};
 
